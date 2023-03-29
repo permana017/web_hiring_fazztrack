@@ -44,7 +44,7 @@ function Home() {
         <div className="w-full flex flex-col items-center">
             <Navbar/>
             <div className='container w-full '>
-                <div className='w-full p-5'>
+                <div className='w-full p-5 flex'>
                     <>
                         <Modal refresh={setTriger} label={<label htmlFor="my-modal" className="btn btn-info">ADD USER</label>}/>
                     </>

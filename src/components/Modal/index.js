@@ -65,7 +65,7 @@ function Modal({label, refresh}) {
                     type="text"
                     label="Address:"/>
                 <div className="modal-action">
-                    <label onClick={()=>handlePost()} htmlFor="my-modal" className="btn">Yay!</label>
+                    <label onClick={()=>handlePost()} htmlFor="my-modal" className="btn">add user</label>
                 </div>
             </div>
         </form>
