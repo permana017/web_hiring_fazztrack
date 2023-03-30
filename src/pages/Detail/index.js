@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
-import {useLocation} from 'react-router'
+import {useLocation, useNavigate} from 'react-router'
 import Input from '../../components/Input'
 import Navbar from '../../components/Navbar'
 import axios from 'axios'
 
 function Detail() {
     let {state} = useLocation()
+
+    const navigate = useNavigate()
 
     const defaultData = state?.some
 
@@ -32,6 +34,9 @@ function Detail() {
         })
             .then((res) => {
                 console.log(res.data);
+                alert(res.data.message)
+                navigate("/")
+
             })
             .catch((err) => {
                 console.log(err.data);
@@ -44,7 +49,7 @@ function Detail() {
             <div className='container w-full flex justify-center mt-20'>
                 <form
                     onSubmit={(e) => handleUpdate(e)}
-                    className='w-1/2 p-10 bg-neutral rounded-xl'>
+                    className=' w-full lg:w-1/2 p-10 bg-neutral rounded-xl'>
                     <p className='text-center font-bold text-xl mb-5'>EDIT</p>
                     <Input
                         label="Username:"

@@ -62,7 +62,7 @@ function Home() {
                                     <button onClick={()=>handleDelete(item._id)} className="btn btn-error">Delete</button>
                                     <Link to="/detail" state={{ some: item }}>
                                         <div>
-                                            <button onClick={()=> navigate("/detail")} className="btn btn-primary">Detail</button>
+                                            <button onClick={()=> navigate("/detail")} className="btn btn-primary">EDIT</button>
                                         </div>
                                     </Link>
                                 </div>
