@@ -25,7 +25,7 @@ function Detail() {
         e.preventDefault()
         axios({
             method: 'put',
-            url: `http://localhost:5000/api/user/${defaultData?._id}`,
+            url: `https://api-mongodb-kappa.vercel.app/api/user/${defaultData?._id}`,
             data: {
                 ...getValue
             }

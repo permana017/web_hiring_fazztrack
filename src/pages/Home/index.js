@@ -16,7 +16,7 @@ function Home() {
     const [triger, setTriger] = useState(true)
     useEffect(() => {
         console.log("masuk");
-        axios.get('http://localhost:5000/api/user')
+        axios.get('https://api-mongodb-kappa.vercel.app/api/user')
         .then(function (response) {
         //   console.log(response.data);
           setData(response.data)
@@ -29,7 +29,7 @@ function Home() {
 
     const handleDelete = (id) =>{
 
-        axios.delete(`http://localhost:5000/api/user/${id}`)
+        axios.delete(`https://api-mongodb-kappa.vercel.app/api/user/${id}`)
         .then(function (response) {
           console.log(response.data)
           setTriger(!triger)

@@ -14,7 +14,7 @@ function Modal({label, refresh}) {
         console.log("hahahha")
         axios({
             method: 'post',
-            url: `http://localhost:5000/api/user`,
+            url: `https://api-mongodb-kappa.vercel.app/api/user`,
             data: {
               ...getValue
             }
